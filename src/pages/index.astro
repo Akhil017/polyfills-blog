@@ -1,9 +1,16 @@
 ---
+import ListCategories from "@/components/ListCategories";
+import ListPosts from "@/components/ListPosts";
+import TitlePage from "@/components/TitlePage";
 import BaseLayout from "@/layouts/BaseLayout";
+import { POSTS } from "@/utils";
 ---
 
 <BaseLayout title="Home">
+  <TitlePage title="All Blogs" />
+  <ListCategories />
   <div>
     <h2 class="text-lg font-medium tracking-wide">akm blog</h2>
+    <ListPosts FirstBig={true} posts={POSTS} />
   </div>
 </BaseLayout>
